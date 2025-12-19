@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joshua Samuel D | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #ffffff;
+            --text: #1e293b;
+            --card-bg: #f8fafc;
+            --accent: #e2e8f0;
+        }
+
+        /* Dark Theme Support */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f172a;
+                --text: #f8fafc;
+                --card-bg: #1e293b;
+                --accent: #334155;
+            }
+        }
+
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+
+        /* Hero Section */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            animation: fadeIn 1.5s ease;
+        }
+
+        h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); margin-bottom: 0.5rem; }
+        .tagline { font-size: 1.2rem; opacity: 0.8; max-width: 600px; margin-bottom: 2rem; }
+
+        .btn-group { display: flex; gap: 1rem; }
+        .btn {
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .btn-primary { background: var(--primary); color: white; }
+        .btn-outline { border: 2px solid var(--primary); color: var(--primary); }
+        .btn:hover { opacity: 0.8; transform: translateY(-3px); }
+
+        /* Sections */
+        section { padding: 5rem 0; border-bottom: 1px solid var(--accent); }
+        h2 { font-size: 2rem; margin-bottom: 2rem; color: var(--primary); }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+        .card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+        .card:hover { border: 1px solid var(--primary); }
+
+        /* Skills Tags */
+        .skills-container { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+        .skill-tag {
+            background: var(--accent);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Lists */
+        ul { list-style: none; padding: 0; }
+        li { margin-bottom: 0.8rem; position: relative; padding-left: 1.5rem; }
+        li::before { content: "▹"; position: absolute; left: 0; color: var(--primary); }
+
+        footer { text-align: center; padding: 3rem; opacity: 0.6; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            .btn-group { flex-direction: column; width: 100%; }
+            .btn { text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <p style="text-transform: uppercase; letter-spacing: 2px; color: var(--primary); font-weight: bold;">Joshua Samuel D</p>
+            <h1>Aspiring <span style="color:var(--primary)">Web Developer</span></h1>
+            <p class="tagline">“Passionate about building clean and user-friendly web experiences”</p>
+            <div class="btn-group">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+        </header>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="grid">
+                <div>
+                    <p>I am a web development enthusiast and quick learner currently pursuing my degree at <strong>Agni College of Technology (Anna University)</strong>.</p>
+                    <p>My career goal is to grow as a Web Developer in a reputed MNC, leveraging my skills in frontend technologies and problem-solving.</p>
+                </div>
+                <div class="card">
+                    <h3>Education</h3>
+                    <p><strong>B.E / B.Tech</strong><br>Agni College of Technology</p>
+                    <p><strong>HSC:</strong> 82% | <strong>SSLC:</strong> 80%</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Technical & Soft Skills</h2>
+            <div class="skills-container">
+                <span class="skill-tag">HTML5</span>
+                <span class="skill-tag">CSS3</span>
+                <span class="skill-tag">JavaScript (Basics)</span>
+                <span class="skill-tag">Python (Basics)</span>
+                <span class="skill-tag">Git & GitHub</span>
+                <span class="skill-tag">Problem Solving</span>
+                <span class="skill-tag">Teamwork</span>
+                <span class="skill-tag">Communication</span>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Simple Responsive Website</h3>
+                    <p>A clean, mobile-first website demonstrating CSS Flexbox and Grid layouts.</p>
+                    <a href="#" class="btn-outline" style="font-size: 0.8rem; padding: 5px 10px;">GitHub</a>
+                    <a href="#" class="btn-outline" style="font-size: 0.8rem; padding: 5px 10px;">Live Demo</a>
+                </div>
+                <div class="card">
+                    <h3>Student Portfolio</h3>
+                    <p>A personal portfolio built to showcase academic and co-curricular achievements.</p>
+                    <a href="#" class="btn-outline" style="font-size: 0.8rem; padding: 5px 10px;">GitHub</a>
+                </div>
+                <div class="card">
+                    <h3>Basic Python Programs</h3>
+                    <p>A collection of logic-based scripts including calculators and data sorters.</p>
+                    <a href="#" class="btn-outline" style="font-size: 0.8rem; padding: 5px 10px;">GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="grid">
+                <div>
+                    <h2>Certifications</h2>
+                    <ul>
+                        <li>Digital 101 Computer Course</li>
+                        <li>Introduction to AI – Great Learning</li>
+                        <li>Basic Python Programming</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Extra Activities</h2>
+                    <ul>
+                        <li><strong>Athletics:</strong> 1st place (100m), 2nd place (200m relay)</li>
+                        <li><strong>Music:</strong> Drums – Grade 2</li>
+                        <li><strong>Sports:</strong> Football Player</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" style="text-align: center;">
+            <h2>Get In Touch</h2>
+            <p>Chennai, India</p>
+            <p><strong>Email:</strong> joshuasamuel0807@gmail.com</p>
+            <div style="margin-top: 2rem;">
+                <a href=" https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=joshua-samuel-d-724bba328" class="btn btn-primary">LinkedIn</a>
+                <a href="https://github.com/Joshuasam8" class="btn btn-outline">GitHub</a>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Joshua Samuel D. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
